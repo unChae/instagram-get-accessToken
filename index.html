@@ -1,0 +1,24 @@
+<body id="body" onload="createLink()">
+</body>
+
+<script>
+  function createLink() {
+    let redirect_uri ="https://www.google.co.kr/";
+    let client_id = "313644806410600";
+
+    let body = document.getElementById("body");
+    let elem = document.createElement("a");
+    elem.innerHTML = `
+      <a href="https://api.instagram.com/oauth/authorize?client_id=${client_id}&redirect_uri=${redirect_uri}&scope=user_profile,user_media&response_type=code">
+        <img src="./instagram.PNG"/>
+      </a>
+    `;
+    body.append(elem);
+  }
+</script>
+
+<style>
+  img {
+    width: 100px;
+  }
+</style>
